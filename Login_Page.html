@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>S Cube Fitness - Login</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #111111;
+            font-family: Arial;
+        }
+
+        .login-box {
+            width: 350px;
+            margin: auto;
+            margin-top: 40px;
+            background: #222222;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gold;
+        }
+
+        .logo {
+            width: 220px;
+            display: block;
+            margin: auto;
+        }
+
+        h2 {
+            color: gold;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        label {
+            color: white;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .btn-login {
+            width: 100%;
+            background: gold;
+            color: black;
+            font-weight: bold;
+        }
+
+        .btn-login:hover {
+            background: orange;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        a {
+            color: gold;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <img src="C:\Users\Asus\Study Material\Project\Gym_Logo.jpeg" class="logo" alt="S Cube Fitness Logo">
+
+        <h2>Member Login</h2>
+
+        <form id="loginForm">
+
+            <label>Mobile Number</label>
+
+            <input type="tel" id="mobile" class="form-control" placeholder="Enter 10 digit Mobile Number" maxlength="10"
+                inputmode="numeric" required>
+
+            <label>Password</label>
+
+            <input type="password" id="password" class="form-control" placeholder="Enter Password" required>
+
+            <input type="checkbox" onclick="showPassword()">
+            <span style="color:white;">Show Password</span>
+
+            <br><br>
+
+            <button type="submit" class="btn btn-login">
+                Login
+            </button>
+
+            <p>
+                New User?
+                <a href="Register_Page.html">Register Here</a>
+            </p>
+
+        </form>
+
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAUuV9raC17M7YiUAazJzAv1TL9tg4Nst8",
+            authDomain: "scubefitness-e2ea4.firebaseapp.com",
+            projectId: "scubefitness-e2ea4",
+            storageBucket: "scubefitness-e2ea4.firebasestorage.app",
+            messagingSenderId: "792208478421",
+            appId: "1:792208478421:web:a3d5f7467d2f5fc266125c"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        function mobileToEmail(mobile) {
+            return mobile + "@scubefitness.app";
+        }
+
+        const loginForm = document.getElementById("loginForm");
+
+        loginForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const mobile = document.getElementById("mobile").value.trim();
+            const password = document.getElementById("password").value;
+
+            if (!/^\d{10}$/.test(mobile)) {
+                alert("Mobile Number must be exactly 10 digits");
+                return;
+            }
+
+            if (password === "") {
+                alert("Enter Password");
+                return;
+            }
+
+            const button = document.querySelector(".btn-login");
+            button.disabled = true;
+            button.textContent = "Logging in...";
+
+            try {
+                await signInWithEmailAndPassword(auth, mobileToEmail(mobile), password);
+                alert("Login Successful");
+                window.location.href = "Home_Page.html";
+            } catch (error) {
+                console.error(error);
+
+                if (error.code === "auth/invalid-credential" ||
+                    error.code === "auth/user-not-found" ||
+                    error.code === "auth/wrong-password") {
+                    alert("Invalid mobile number or password");
+                } else if (error.code === "auth/too-many-requests") {
+                    alert("Too many attempts. Please try again later.");
+                } else {
+                    alert("Login failed: " + error.message);
+                }
+            } finally {
+                button.disabled = false;
+                button.textContent = "Login";
+            }
+        });
+
+        window.showPassword = function () {
+            const input = document.getElementById("password");
+            input.type = input.type === "password" ? "text" : "password";
+        };
+    </script>
+</body>
+
+</html>

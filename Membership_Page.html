@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S Cube Fitness | Membership Plans</title>
+
+    <!-- Bootstrap 5.3.3 & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Membership_Page.css" />
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVIGATION BAR (Unified Style)
+         ===================================================== -->
+    <nav
+        class="navbar navbar-expand-lg navbar-dark bg-black bg-opacity-80 sticky-top border-bottom border-warning border-opacity-25 backdrop-blur rounded-bottom-4">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-inline-flex align-items-center gap-2 fw-bold text-uppercase text-warning fs-3 mb-0"
+                href="Home_Page.html">
+                <img src="C:\Users\Asus\Study Material\Project\Gym_Logo.jpeg" class="brand-logo img-fluid"
+                    alt="S Cube Logo" class="brand-logo img-fluid" />
+                <span>S Cube <span class="text-white">Fitness</span></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#memberNav"
+                aria-controls="memberNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="memberNav">
+                <ul class="navbar-nav ms-auto text-uppercase fw-semibold gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home_Page.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning" href="Membership_Page.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Zumba_Page.html">Zumba</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PersonalTraining_Page.html">Personal Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About_Page.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <!-- =================================
+             HERO
+        ================================== -->
+        <section class="hero">
+            <h1>
+                <span class="gold">MEMBERSHIP</span>
+                <span class="white">PLANS</span>
+            </h1>
+            <p>INVEST IN A STRONGER YOU</p>
+            <div class="hero-line"></div>
+        </section>
+
+        <!-- =================================
+             MEMBERSHIP CARDS
+        ================================== -->
+        <section class="plans">
+
+            <!-- 1 MONTH -->
+            <div class="membership-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=85"
+                        alt="Gym">
+                    <div class="image-shine"></div>
+                </div>
+                <div class="card-content">
+                    <h3>1 Month</h3>
+                    <div class="description">
+                        START YOUR<br>FITNESS JOURNEY
+                    </div>
+                    <div class="gold-small-line"></div>
+                    <div class="price">₹3000</div>
+                    <div class="duration">/ MONTH</div>
+
+                    <div class="benefits">
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>Access to Gym Floor</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>All Basic Equipment</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>Trainer Guidance</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span class="steam-highlight">Free Steam Bath (2 Times a Week)</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-buy" onclick="showPayment('1 Month', 3000)">
+                        Choose Plan
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3 MONTH -->
+            <div class="membership-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=85"
+                        alt="Fitness">
+                    <div class="image-shine"></div>
+                </div>
+                <div class="card-content">
+                    <h3>3 Months</h3>
+                    <div class="description">
+                        STAY CONSISTENT<br>SEE THE CHANGE
+                    </div>
+                    <div class="gold-small-line"></div>
+                    <div class="price">₹5000</div>
+                    <div class="duration">/ 3 MONTHS</div>
+
+                    <div class="benefits">
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>Access to Gym Floor</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>All Basic Equipment</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>Trainer Guidance</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span class="steam-highlight">Free Steam Bath (2 Times a Week)</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-buy" onclick="showPayment('3 Months', 5000)">
+                        Choose Plan
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6 MONTH -->
+            <div class="membership-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=85"
+                        alt="Strength training">
+                    <div class="image-shine"></div>
+                </div>
+                <div class="card-content">
+                    <h3>6 Months</h3>
+                    <div class="description">
+                        BUILD STRENGTH<br>CREATE HABITS
+                    </div>
+                    <div class="gold-small-line"></div>
+                    <div class="price">₹8000</div>
+                    <div class="duration">/ 6 MONTHS</div>
+
+                    <div class="benefits">
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>Access to Gym Floor</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>All Basic Equipment</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>Trainer Guidance</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span class="steam-highlight">Free Steam Bath (2 Times a Week)</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-buy" onclick="showPayment('6 Months', 8000)">
+                        Choose Plan
+                    </button>
+                </div>
+            </div>
+
+            <!-- 12 MONTH -->
+            <div class="membership-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1534368420009-621312c8bc2e?auto=format&fit=crop&w=800&q=85"
+                        alt="Workout">
+                    <div class="image-shine"></div>
+                </div>
+                <div class="card-content">
+                    <h3>12 Months</h3>
+                    <div class="description">
+                        A STRONGER<br>HEALTHIER YOU
+                    </div>
+                    <div class="gold-small-line"></div>
+                    <div class="price">₹14000</div>
+                    <div class="duration">/ YEAR</div>
+
+                    <div class="benefits">
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>Access to Gym Floor</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>All Basic Equipment</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span>Trainer Guidance</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check">✓</span>
+                            <span class="steam-highlight">Free Steam Bath (2 Times a Week)</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-buy" onclick="showPayment('12 Months', 14000)">
+                        Choose Plan
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- =================================
+             STEAM BATH
+        ================================== -->
+        <section class="steam-section">
+            <div class="steam-image"></div>
+            <div class="steam-content">
+                <h2>Free Steam Bath</h2>
+                <h4>2 TIMES A WEEK</h4>
+                <p>
+                    Relax your body • Reduce muscle soreness<br>
+                    Improve recovery • Stay fresh & active
+                </p>
+            </div>
+            <div class="steam-tagline">
+                Recovery<br>is part of<br>Progress
+            </div>
+        </section>
+
+        <!-- =================================
+             PAYMENT SECTION
+        ================================== -->
+        <section id="paymentBox" class="payment-section" style="display:none;">
+            <div class="payment-left">
+                <div class="payment-title">S CUBE FITNESS</div>
+                <div class="secure">SECURE PAYMENT</div>
+                <div class="payment-line"></div>
+
+                <div class="payment-label">Selected Plan</div>
+                <div class="selected-box">
+                    <div id="selectedPlan" class="selected-value">-</div>
+                </div>
+
+                <div class="payment-label">Amount</div>
+                <div class="selected-box">
+                    <div id="selectedAmount" class="selected-amount">-</div>
+                </div>
+
+                <button class="pay-btn" onclick="openUPI()">
+                    Pay with any UPI App
+                </button>
+
+                <div id="fallbackMessage" class="fallback">
+                    If your browser does not open the UPI app, scan the QR code or copy the UPI ID below.
+                </div>
+            </div>
+
+            <!-- QR SIDE -->
+            <div class="payment-right">
+                <div id="qrcode"></div>
+                <div class="scan-text">
+                    Scan & Pay<br>using any UPI app
+                </div>
+
+                <div class="upi-label">UPI ID</div>
+                <div class="upi-box">rohanvijay321-1@oksbi</div>
+
+                <button class="copy-btn" onclick="copyUPI()">
+                    Copy UPI ID
+                </button>
+
+                <button class="close-btn" onclick="closePayment()">
+                    Close
+                </button>
+            </div>
+        </section>
+
+        <!-- =================================
+             FOOTER
+        ================================== -->
+        <div class="bottom">
+            <a href="Home_Page.html" class="back-btn">
+                ← Back to Home
+            </a>
+            <div class="footer">
+                S CUBE FITNESS<br>
+                STRONGER PEOPLE. BRIGHTER TOMORROW.
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Payment Script Logic -->
+    <script>
+        const UPI_ID = "rohanvijay321-1@oksbi";
+        const BUSINESS_NAME = "S Cube Fitness";
+        let upiPaymentURL = "";
+
+        function showPayment(plan, amount) {
+            document.getElementById("selectedPlan").innerText = plan + " Membership";
+            document.getElementById("selectedAmount").innerText = "₹" + amount;
+
+            upiPaymentURL = "upi://pay" +
+                "?pa=" + encodeURIComponent(UPI_ID) +
+                "&pn=" + encodeURIComponent(BUSINESS_NAME) +
+                "&am=" + encodeURIComponent(amount) +
+                "&cu=INR" +
+                "&tn=" + encodeURIComponent(plan + " Membership");
+
+            const qrURL = "https://api.qrserver.com/v1/create-qr-code/" +
+                "?size=220x220&data=" + encodeURIComponent(upiPaymentURL);
+
+            document.getElementById("qrcode").innerHTML = '<img src="' + qrURL + '" alt="UPI QR Code">';
+
+            const payment = document.getElementById("paymentBox");
+            payment.style.display = "grid";
+            document.getElementById("fallbackMessage").style.display = "none";
+
+            setTimeout(function () {
+                payment.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }, 100);
+        }
+
+        function openUPI() {
+            if (upiPaymentURL === "") {
+                alert("Please select a membership plan first.");
+                return;
+            }
+            document.getElementById("fallbackMessage").style.display = "block";
+            window.location.href = upiPaymentURL;
+        }
+
+        function copyUPI() {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(UPI_ID)
+                    .then(function () {
+                        alert("UPI ID copied successfully!");
+                    })
+                    .catch(function () {
+                        alert("UPI ID: " + UPI_ID);
+                    });
+            } else {
+                alert("UPI ID: " + UPI_ID);
+            }
+        }
+
+        function closePayment() {
+            document.getElementById("paymentBox").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

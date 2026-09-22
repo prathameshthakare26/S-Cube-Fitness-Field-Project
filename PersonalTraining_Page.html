@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S Cube Fitness | Personal Training</title>
+
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="PersonalTraining_Page.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVIGATION BAR (Unified Style)
+         ===================================================== -->
+    <nav
+        class="navbar navbar-expand-lg navbar-dark bg-black bg-opacity-80 sticky-top border-bottom border-warning border-opacity-25 backdrop-blur rounded-bottom-4">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-inline-flex align-items-center gap-2 fw-bold text-uppercase text-warning fs-3 mb-0"
+                href="Home_Page.html">
+                <img src="C:\Users\Asus\Study Material\Project\Gym_Logo.jpeg" class="brand-logo img-fluid"
+                    alt="S Cube Logo" class="brand-logo img-fluid" />
+                <span>S Cube <span class="text-white">Fitness</span></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ptNav"
+                aria-controls="ptNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="ptNav">
+                <ul class="navbar-nav ms-auto text-uppercase fw-semibold gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home_Page.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Membership_Page.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Zumba_Page.html">Zumba</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning" href="PersonalTraining_Page.html">Personal Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About_Page.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =====================================================
+         HERO SECTION
+         ===================================================== -->
+    <section class="training-hero">
+        <div class="training-hero-background"></div>
+
+        <div class="training-hero-content">
+            <p class="section-label">S CUBE FITNESS</p>
+            <h1>PERSONAL TRAINING</h1>
+            <h2>Train Smart. <span>Get Strong.</span></h2>
+            <p>
+                Get personalized guidance from experienced trainers
+                who understand your fitness goals and training needs.
+            </p>
+            <a href="#gym-trainers" class="btn primary-btn">
+                Meet Our Trainers
+            </a>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         GYM TRAINERS
+         ===================================================== -->
+    <section class="trainer-section" id="gym-trainers">
+        <div class="section-heading">
+            <p class="section-label">PERSONAL TRAINING</p>
+            <h2>Gym <span>Trainers</span></h2>
+            <p>
+                Work with experienced trainers for personalized
+                strength, fitness and workout guidance.
+            </p>
+        </div>
+
+        <div class="trainer-grid">
+            <!-- Trainer 1 -->
+            <article class="trainer-card">
+                <div class="trainer-image">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=85"
+                        alt="Rahul Verma">
+                </div>
+                <div class="trainer-card-content">
+                    <h3>Rahul Verma</h3>
+                    <p class="trainer-specialization">Strength & Conditioning</p>
+                    <p class="trainer-experience">7+ Years Experience</p>
+                    <p>
+                        Focuses on strength training, proper exercise
+                        technique and structured workout programs.
+                    </p>
+                    <button class="book-btn" data-trainer="Rahul Verma" data-specialization="Strength & Conditioning">
+                        Book Slot
+                    </button>
+                </div>
+            </article>
+
+            <!-- Trainer 2 -->
+            <article class="trainer-card">
+                <div class="trainer-image">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=85"
+                        alt="Aman Joshi">
+                </div>
+                <div class="trainer-card-content">
+                    <h3>Aman Joshi</h3>
+                    <p class="trainer-specialization">Functional Training</p>
+                    <p class="trainer-experience">5+ Years Experience</p>
+                    <p>
+                        Specializes in functional workouts, mobility
+                        and improving overall fitness performance.
+                    </p>
+                    <button class="book-btn" data-trainer="Aman Joshi" data-specialization="Functional Training">
+                        Book Slot
+                    </button>
+                </div>
+            </article>
+
+            <!-- Trainer 3 -->
+            <article class="trainer-card">
+                <div class="trainer-image">
+                    <img src="https://images.unsplash.com/photo-1533681904393-9ab6eee7e408?auto=format&fit=crop&w=800&q=85"
+                        alt="Vikram Singh">
+                </div>
+                <div class="trainer-card-content">
+                    <h3>Vikram Singh</h3>
+                    <p class="trainer-specialization">Fitness & Weight Training</p>
+                    <p class="trainer-experience">6+ Years Experience</p>
+                    <p>
+                        Helps members develop consistent workout habits
+                        with practical weight-training programs.
+                    </p>
+                    <button class="book-btn" data-trainer="Vikram Singh"
+                        data-specialization="Fitness & Weight Training">
+                        Book Slot
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         ZUMBA TRAINERS
+         ===================================================== -->
+    <section class="zumba-trainer-section" id="zumba-trainers">
+        <div class="section-heading">
+            <p class="section-label">ZUMBA PROGRAM</p>
+            <h2>Zumba <span>Trainers</span></h2>
+            <p>
+                Meet the instructors who bring energy, rhythm and
+                fitness together in every Zumba session.
+            </p>
+        </div>
+
+        <div class="trainer-grid">
+            <!-- Zumba Trainer 1 -->
+            <article class="trainer-card">
+                <div class="trainer-image">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85"
+                        alt="Neha Sharma">
+                </div>
+                <div class="trainer-card-content">
+                    <h3>Neha Sharma</h3>
+                    <p class="trainer-specialization">Certified Zumba Instructor</p>
+                    <p class="trainer-experience">5+ Years Experience</p>
+                    <p>
+                        Leads energetic rhythm-based workouts focused
+                        on movement, stamina and enjoyable sessions.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Zumba Trainer 2 -->
+            <article class="trainer-card">
+                <div class="trainer-image">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=85"
+                        alt="Priya Mehta">
+                </div>
+                <div class="trainer-card-content">
+                    <h3>Priya Mehta</h3>
+                    <p class="trainer-specialization">Senior Zumba Instructor</p>
+                    <p class="trainer-experience">6+ Years Experience</p>
+                    <p>
+                        Combines dance movements and cardio exercises
+                        to create energetic and engaging sessions.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Zumba Trainer 3 -->
+            <article class="trainer-card">
+                <div class="trainer-image">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=85"
+                        alt="Riya Kapoor">
+                </div>
+                <div class="trainer-card-content">
+                    <h3>Riya Kapoor</h3>
+                    <p class="trainer-specialization">Fitness & Zumba Coach</p>
+                    <p class="trainer-experience">4+ Years Experience</p>
+                    <p>
+                        Focuses on dance, cardio and fitness movements
+                        suitable for different experience levels.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         BOOKING MODAL
+         ===================================================== -->
+    <div class="booking-modal" id="bookingModal">
+        <div class="booking-box">
+            <button class="close-btn" id="closeBooking">&times;</button>
+            <p class="section-label">PERSONAL TRAINING</p>
+            <h2>Book Your <span>Training Slot</span></h2>
+
+            <form id="bookingForm">
+                <label>Selected Trainer</label>
+                <input type="text" id="selectedTrainer" readonly>
+
+                <label for="memberName">Your Name</label>
+                <input type="text" id="memberName" placeholder="Enter your name" required>
+
+                <label for="memberPhone">Mobile Number</label>
+                <input type="tel" id="memberPhone" placeholder="Enter 10 digit mobile number" maxlength="10" required>
+
+                <label for="bookingDate">Preferred Date</label>
+                <input type="date" id="bookingDate" required>
+
+                <label for="bookingTime">Preferred Time</label>
+                <select id="bookingTime" required>
+                    <option value="">Select a time slot</option>
+                    <option value="7:00 AM">7:00 AM</option>
+                    <option value="9:00 AM">9:00 AM</option>
+                    <option value="5:00 PM">5:00 PM</option>
+                    <option value="7:00 PM">7:00 PM</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Confirm Booking</button>
+                <p id="bookingMessage" class="booking-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>S CUBE FITNESS</h3>
+                <p>Beyond Fitness. It's a Lifestyle.</p>
+            </div>
+            <div class="footer-links">
+                <a href="Home_Page.html">Home</a>
+                <a href="Membership.html">Membership</a>
+                <a href="Zumba_Page.html">Zumba</a>
+                <a href="Personal_Training.html">Personal Training</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 S Cube Fitness. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Page Logic Script -->
+    <script src="PersonalTraining_Page.js"></script>
+</body>
+
+</html>

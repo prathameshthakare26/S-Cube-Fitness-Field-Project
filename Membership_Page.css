@@ -1,0 +1,802 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     background: #050505;
+     color: #fff;
+     font-family: "Montserrat", sans-serif;
+     overflow-x: hidden;
+ }
+
+ /* =====================================
+           NAVBAR (Unified Style)
+        ====================================== */
+ .backdrop-blur {
+     backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+ }
+
+ .navbar-brand {
+     white-space: nowrap;
+ }
+
+ .brand-logo {
+     width: 50px;
+     height: 50px;
+     object-fit: contain;
+     display: inline-block;
+ }
+
+ .nav-link {
+     transition: color 0.2s ease;
+     font-size: 14px;
+ }
+
+ .nav-link:hover {
+     color: #ffd21a !important;
+ }
+
+ .navbar-toggler {
+     border-color: rgba(255, 210, 26, 0.5);
+ }
+
+ .navbar-toggler:focus {
+     box-shadow: 0 0 0 0.25rem rgba(255, 210, 26, 0.25);
+ }
+
+ /* =====================================
+           BACKGROUND
+        ====================================== */
+ body::before {
+     content: "";
+     position: fixed;
+     inset: 0;
+     z-index: -2;
+     pointer-events: none;
+     background:
+         linear-gradient(rgba(0, 0, 0, .80),
+             rgba(0, 0, 0, .94)),
+         url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2200&q=85");
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+ }
+
+ body::after {
+     content: "";
+     position: fixed;
+     inset: 0;
+     z-index: -1;
+     pointer-events: none;
+     background-image:
+         linear-gradient(rgba(255, 208, 0, .025) 1px,
+             transparent 1px),
+         linear-gradient(90deg,
+             rgba(255, 208, 0, .025) 1px,
+             transparent 1px);
+     background-size: 50px 50px;
+ }
+
+ /* =====================================
+           MAIN CONTAINER
+        ====================================== */
+ .main-container {
+     width: 100%;
+     max-width: 1250px;
+     margin: auto;
+     padding: 20px 24px 60px;
+ }
+
+ /* =====================================
+           HERO
+        ====================================== */
+ .hero {
+     text-align: center;
+     padding: 25px 0 35px;
+     animation: heroAppear 1s ease;
+ }
+
+ .hero h1 {
+     font-size: clamp(43px, 7vw, 80px);
+     font-weight: 900;
+     letter-spacing: 2px;
+     line-height: 1;
+     text-transform: uppercase;
+ }
+
+ .hero .gold {
+     color: #ffd21a;
+     text-shadow: 0 0 18px rgba(255, 210, 26, .14);
+ }
+
+ .hero .white {
+     color: #f5f5f5;
+ }
+
+ .hero p {
+     color: #bbb;
+     font-size: 14px;
+     letter-spacing: 9px;
+     margin-top: 20px;
+ }
+
+ .hero-line {
+     width: 75px;
+     height: 3px;
+     background: #ffd21a;
+     margin: 20px auto 0;
+     animation: goldPulse 2s infinite;
+ }
+
+ /* =====================================
+           PLANS
+        ====================================== */
+ .plans {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 16px;
+ }
+
+ /* =====================================
+           CARD
+        ====================================== */
+ .membership-card {
+     position: relative;
+     border: 1px solid rgba(255, 210, 26, .70);
+     border-radius: 16px;
+     overflow: hidden;
+     background: #090909;
+     box-shadow: 0 12px 35px rgba(0, 0, 0, .60);
+     opacity: 0;
+     transform: translateY(45px);
+     animation: cardEnter .8s ease forwards;
+     transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+ }
+
+ .membership-card:nth-child(1) {
+     animation-delay: .10s;
+ }
+
+ .membership-card:nth-child(2) {
+     animation-delay: .22s;
+ }
+
+ .membership-card:nth-child(3) {
+     animation-delay: .34s;
+ }
+
+ .membership-card:nth-child(4) {
+     animation-delay: .46s;
+ }
+
+ .membership-card:hover {
+     transform: translateY(-9px) scale(1.012);
+     border-color: #ffd21a;
+     box-shadow: 0 18px 45px rgba(0, 0, 0, .70), 0 0 22px rgba(255, 210, 26, .10);
+ }
+
+ /* =====================================
+           IMAGE
+        ====================================== */
+ .card-image {
+     position: relative;
+     height: 210px;
+     overflow: hidden;
+ }
+
+ .card-image img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     filter: brightness(.68) grayscale(20%);
+     transition: transform .7s ease, filter .7s ease;
+ }
+
+ .membership-card:hover .card-image img {
+     transform: scale(1.08);
+     filter: brightness(.84) grayscale(0%);
+ }
+
+ .card-image::after {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: linear-gradient(to bottom,
+             transparent 20%,
+             rgba(0, 0, 0, .25) 48%,
+             rgba(0, 0, 0, .96) 100%);
+ }
+
+ .image-shine {
+     position: absolute;
+     left: -120%;
+     top: 0;
+     width: 65%;
+     height: 100%;
+     background: linear-gradient(90deg,
+             transparent,
+             rgba(255, 255, 255, .13),
+             transparent);
+     transform: skewX(-25deg);
+     transition: left .85s ease;
+     z-index: 3;
+ }
+
+ .membership-card:hover .image-shine {
+     left: 140%;
+ }
+
+ /* =====================================
+           CARD CONTENT
+        ====================================== */
+ .card-content {
+     position: relative;
+     z-index: 5;
+     padding: 5px 16px 16px;
+     text-align: center;
+     margin-top: -12px;
+ }
+
+ .card-content h3 {
+     font-size: 23px;
+     font-weight: 900;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     margin-bottom: 12px;
+ }
+
+ .description {
+     color: #ddd;
+     font-size: 11px;
+     line-height: 1.8;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+     min-height: 39px;
+ }
+
+ .gold-small-line {
+     width: 40px;
+     height: 3px;
+     background: #ffd21a;
+     margin: 12px auto 14px;
+     box-shadow: 0 0 9px rgba(255, 210, 26, .50);
+ }
+
+ .price {
+     color: #ffd21a;
+     font-size: 31px;
+     font-weight: 900;
+     line-height: 1;
+ }
+
+ .duration {
+     font-size: 11px;
+     letter-spacing: 2px;
+     color: #ddd;
+     margin-top: 7px;
+     margin-bottom: 12px;
+ }
+
+ /* =====================================
+           BENEFITS
+        ====================================== */
+ .benefits {
+     text-align: left;
+     padding: 0 6px;
+     margin: 10px 0 15px;
+ }
+
+ .benefit {
+     display: flex;
+     align-items: flex-start;
+     gap: 8px;
+     color: #e2e2e2;
+     font-size: 11px;
+     line-height: 1.4;
+     margin-bottom: 7px;
+ }
+
+ .check {
+     width: 17px;
+     height: 17px;
+     flex-shrink: 0;
+     border: 1px solid #ffd21a;
+     border-radius: 50%;
+     color: #ffd21a;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 10px;
+     font-weight: bold;
+ }
+
+ .steam-highlight {
+     color: #ffd21a;
+     font-weight: bold;
+ }
+
+ /* =====================================
+           BUY BUTTON
+        ====================================== */
+ .btn-buy {
+     width: 100%;
+     border: 0;
+     border-radius: 8px;
+     padding: 12px;
+     background: linear-gradient(135deg,
+             #ffd21a,
+             #e7a900);
+     color: #050505;
+     font-size: 14px;
+     font-weight: 900;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     position: relative;
+     overflow: hidden;
+     transition: transform .25s ease, box-shadow .25s ease;
+ }
+
+ .btn-buy::before {
+     content: "";
+     position: absolute;
+     left: -130%;
+     top: 0;
+     width: 70%;
+     height: 100%;
+     background: linear-gradient(90deg,
+             transparent,
+             rgba(255, 255, 255, .40),
+             transparent);
+     transform: skewX(-25deg);
+     transition: left .65s ease;
+ }
+
+ .btn-buy:hover::before {
+     left: 140%;
+ }
+
+ .btn-buy:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 9px 24px rgba(255, 210, 26, .22);
+ }
+
+ /* =====================================
+           STEAM SECTION
+        ====================================== */
+ .steam-section {
+     display: grid;
+     grid-template-columns: 1.15fr 1.7fr 1fr;
+     align-items: center;
+     min-height: 130px;
+     margin-top: 25px;
+     border: 1px solid rgba(255, 210, 26, .65);
+     border-radius: 16px;
+     overflow: hidden;
+     background: #090909;
+     box-shadow: 0 10px 35px rgba(0, 0, 0, .55);
+     animation: cardEnter .9s ease;
+ }
+
+ .steam-image {
+     height: 130px;
+     background:
+         linear-gradient(90deg,
+             rgba(0, 0, 0, .20),
+             rgba(0, 0, 0, .55)),
+         url("https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=1000&q=85");
+     background-size: cover;
+     background-position: center;
+     position: relative;
+ }
+
+ .steam-image::after {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: linear-gradient(90deg,
+             transparent,
+             #090909);
+ }
+
+ .steam-content {
+     padding: 20px;
+ }
+
+ .steam-content h2 {
+     color: #ffd21a;
+     font-size: 23px;
+     font-weight: 900;
+     letter-spacing: 4px;
+     text-transform: uppercase;
+     margin-bottom: 7px;
+ }
+
+ .steam-content h4 {
+     color: #fff;
+     font-size: 16px;
+     letter-spacing: 4px;
+     margin-bottom: 12px;
+ }
+
+ .steam-content p {
+     color: #aaa;
+     font-size: 12px;
+     line-height: 1.8;
+ }
+
+ .steam-tagline {
+     text-align: center;
+     color: #ffd21a;
+     font-size: 20px;
+     font-style: italic;
+     font-family: cursive;
+     padding: 20px;
+ }
+
+ /* =====================================
+           PAYMENT
+        ====================================== */
+ .payment-section {
+     display: grid;
+     grid-template-columns: 1.1fr .9fr;
+     gap: 0;
+     margin-top: 25px;
+     border: 1px solid rgba(255, 210, 26, .65);
+     border-radius: 16px;
+     overflow: hidden;
+     background: linear-gradient(145deg,
+             #0c0c0c,
+             #050505);
+     box-shadow: 0 18px 45px rgba(0, 0, 0, .65);
+ }
+
+ .payment-left {
+     padding: 32px;
+ }
+
+ .payment-title {
+     color: #ffd21a;
+     font-size: 27px;
+     font-weight: 900;
+     letter-spacing: 6px;
+     text-align: center;
+     margin-bottom: 8px;
+ }
+
+ .secure {
+     text-align: center;
+     color: #aaa;
+     font-size: 11px;
+     letter-spacing: 4px;
+     margin-bottom: 20px;
+ }
+
+ .payment-line {
+     height: 1px;
+     background: #2d2d2d;
+     margin-bottom: 20px;
+ }
+
+ .payment-label {
+     color: #aaa;
+     font-size: 11px;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+     margin-bottom: 6px;
+ }
+
+ .selected-box {
+     background: #151515;
+     border: 1px solid #303030;
+     border-radius: 8px;
+     padding: 13px 15px;
+     margin-bottom: 15px;
+ }
+
+ .selected-value {
+     color: #fff;
+     font-size: 17px;
+     font-weight: bold;
+ }
+
+ .selected-amount {
+     color: #ffd21a;
+     font-size: 29px;
+     font-weight: 900;
+ }
+
+ .pay-btn {
+     width: 100%;
+     border: none;
+     border-radius: 8px;
+     padding: 13px;
+     background: #00b958;
+     color: #fff;
+     font-size: 14px;
+     font-weight: 800;
+     letter-spacing: .5px;
+     transition: .25s;
+ }
+
+ .pay-btn:hover {
+     background: #00a54e;
+     transform: translateY(-2px);
+     box-shadow: 0 9px 22px rgba(0, 185, 88, .20);
+ }
+
+ .fallback {
+     display: none;
+     margin-top: 12px;
+     padding: 10px;
+     border-radius: 8px;
+     border: 1px solid rgba(255, 210, 26, .45);
+     background: rgba(255, 210, 26, .07);
+     color: #dfc65f;
+     font-size: 12px;
+     line-height: 1.5;
+ }
+
+ /* =====================================
+           QR
+        ====================================== */
+ .payment-right {
+     padding: 32px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+ }
+
+ #qrcode {
+     width: 210px;
+     height: 210px;
+     padding: 10px;
+     border-radius: 13px;
+     background: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ #qrcode img {
+     width: 190px;
+     height: 190px;
+ }
+
+ .scan-text {
+     color: #aaa;
+     font-size: 11px;
+     letter-spacing: 1px;
+     line-height: 1.6;
+     margin-top: 9px;
+ }
+
+ .upi-label {
+     color: #aaa;
+     font-size: 10px;
+     letter-spacing: 2px;
+     margin-top: 17px;
+     margin-bottom: 6px;
+ }
+
+ .upi-box {
+     width: 100%;
+     padding: 11px;
+     background: #141414;
+     border: 1px solid #333;
+     border-radius: 8px;
+     color: #ffd21a;
+     font-size: 12px;
+     word-break: break-all;
+ }
+
+ .copy-btn {
+     width: 100%;
+     margin-top: 9px;
+     padding: 10px;
+     border: 1px solid #ffd21a;
+     background: transparent;
+     color: white;
+     border-radius: 8px;
+     font-weight: 700;
+     transition: .25s;
+ }
+
+ .copy-btn:hover {
+     background: #ffd21a;
+     color: #000;
+ }
+
+ .close-btn {
+     margin-top: 16px;
+     padding: 8px 24px;
+     color: #fff;
+     background: transparent;
+     border: 1px solid #555;
+     border-radius: 8px;
+     transition: .25s;
+ }
+
+ .close-btn:hover {
+     color: #ffd21a;
+     border-color: #ffd21a;
+ }
+
+ /* =====================================
+           FOOTER
+        ====================================== */
+ .bottom {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 35px;
+     padding-top: 20px;
+     border-top: 1px solid #202020;
+ }
+
+ .back-btn {
+     display: inline-block;
+     padding: 11px 17px;
+     border: 1px solid #555;
+     color: #fff;
+     text-decoration: none;
+     border-radius: 8px;
+     font-size: 14px;
+     font-weight: 700;
+     transition: .25s;
+ }
+
+ .back-btn:hover {
+     color: #ffd21a;
+     border-color: #ffd21a;
+ }
+
+ .footer {
+     color: #777;
+     text-align: right;
+     font-size: 11px;
+     letter-spacing: 4px;
+     line-height: 1.8;
+ }
+
+ /* =====================================
+           ANIMATIONS
+        ====================================== */
+ @keyframes heroAppear {
+     from {
+         opacity: 0;
+         transform: translateY(-20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes cardEnter {
+     from {
+         opacity: 0;
+         transform: translateY(45px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes goldPulse {
+
+     0%,
+     100% {
+         box-shadow: 0 0 7px rgba(255, 210, 26, .35);
+     }
+
+     50% {
+         box-shadow: 0 0 20px rgba(255, 210, 26, .75);
+     }
+ }
+
+ /* =====================================
+           RESPONSIVE DESIGN
+        ====================================== */
+ @media(max-width: 1000px) {
+     .plans {
+         grid-template-columns: repeat(2, 1fr);
+     }
+
+     .steam-section {
+         grid-template-columns: 1fr 1.5fr;
+     }
+
+     .steam-tagline {
+         display: none;
+     }
+
+     .payment-section {
+         grid-template-columns: 1fr;
+     }
+ }
+
+ @media(max-width: 650px) {
+     .main-container {
+         padding: 17px 13px 40px;
+     }
+
+     .hero {
+         padding: 15px 0 30px;
+     }
+
+     .hero h1 {
+         font-size: 37px;
+     }
+
+     .hero p {
+         font-size: 9px;
+         letter-spacing: 4px;
+     }
+
+     .plans {
+         grid-template-columns: 1fr;
+     }
+
+     .membership-card {
+         border-radius: 14px;
+     }
+
+     .card-image {
+         height: 235px;
+     }
+
+     .steam-section {
+         grid-template-columns: 1fr;
+     }
+
+     .steam-image {
+         height: 170px;
+     }
+
+     .steam-image::after {
+         background: linear-gradient(to bottom,
+                 transparent,
+                 #090909);
+     }
+
+     .steam-content {
+         padding: 22px 18px;
+     }
+
+     .steam-content h2 {
+         font-size: 21px;
+         letter-spacing: 3px;
+     }
+
+     .payment-left,
+     .payment-right {
+         padding: 23px 18px;
+     }
+
+     .payment-title {
+         font-size: 23px;
+         letter-spacing: 4px;
+     }
+
+     .bottom {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 18px;
+     }
+
+     .footer {
+         text-align: left;
+     }
+ }

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | S Cube Fitness - 6,500 Sq.Ft Studio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="Home_Page.css" />
+    <style>
+        .gold-badge {
+            background-color: rgba(255, 193, 7, 0.15);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .stat-card {
+            background: rgba(18, 18, 18, 0.7);
+            border-left: 3px solid var(--gold);
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        /* Review Cards & Sliding Carousel Controls */
+        .review-card {
+            background: rgba(18, 18, 18, 0.85);
+            border: 1px solid rgba(255, 193, 7, 0.35);
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            min-height: 240px;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            border-color: #ffd54f;
+            transform: translateY(-4px);
+        }
+
+        .custom-carousel-btn {
+            width: 46px;
+            height: 46px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            opacity: 0.9;
+            transition: all 0.25s ease;
+        }
+
+        .custom-carousel-btn:hover {
+            background: var(--gold);
+            opacity: 1;
+        }
+
+        .custom-carousel-btn:hover i {
+            color: #000 !important;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 193, 7, 0.4);
+            border: none;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicators .active {
+            width: 26px;
+            border-radius: 6px;
+            background-color: var(--gold);
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-light">
+
+    <div class="hero-bg-overlay"></div>
+
+    <div class="content-wrapper">
+
+        <nav
+            class="navbar navbar-expand-lg navbar-dark bg-black bg-opacity-80 sticky-top border-bottom border-warning border-opacity-25 backdrop-blur rounded-bottom-4">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand d-inline-flex align-items-center gap-2 fw-bold text-uppercase text-warning fs-3"
+                    href="home_Page.html">
+                    <img src="C:\Users\Asus\Study Material\Project\Gym_Logo.jpeg" class="brand-logo img-fluid"
+                        alt="S Cube Fitness Logo"> <span>S Cube <span class="text-white">Fitness</span></span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aboutNav"
+                    aria-controls="aboutNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="aboutNav">
+                    <ul class="navbar-nav ms-auto text-uppercase fw-semibold gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home_Page.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-warning" href="About_Page.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home_Page.html#amenities">Amenities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home_Page.html#classes">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#fitpass">FITPASS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="container text-center py-5">
+            <div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-10">
+                    <span class="badge gold-badge px-3 py-2 text-uppercase mb-3 fw-bold">Built For Pure
+                        Performance</span>
+                    <h1 class="display-3 fw-bold text-uppercase text-light mb-3">
+                        6,500 Sq.Ft Of Uncompromised <br>
+                        <span class="text-warning text-glow">Fitness Standards</span>
+                    </h1>
+                    <p class="lead text-light-50 mb-4">
+                        Founded with a single vision: to elevate everyday training into an elite athletic experience. S
+                        Cube Fitness merges cutting-edge biomechanics with restorative recovery medicine.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section class="container pb-5">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="stat-card p-4 rounded-3 h-100">
+                        <h2 class="display-5 fw-bold text-warning mb-1">6,500</h2>
+                        <p class="text-secondary small text-uppercase mb-0">Sq.Ft Training Floor</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card p-4 rounded-3 h-100">
+                        <h2 class="display-5 fw-bold text-warning mb-1">15+</h2>
+                        <p class="text-secondary small text-uppercase mb-0">Certified Coaches</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card p-4 rounded-3 h-100">
+                        <h2 class="display-5 fw-bold text-warning mb-1">4-in-1</h2>
+                        <p class="text-secondary small text-uppercase mb-0">Recovery Suites</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card p-4 rounded-3 h-100">
+                        <h2 class="display-5 fw-bold text-warning mb-1">1,800+</h2>
+                        <p class="text-secondary small text-uppercase mb-0">Active Members</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5 border-top border-secondary border-opacity-25">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div
+                        class="image-frame rounded-4 border border-warning overflow-hidden shadow-lg position-relative">
+                        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1000&auto=format&fit=crop"
+                            alt="S Cube Heavy Weights Training Area"
+                            class="img-fluid w-100 object-fit-cover studio-img" />
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h1 fw-bold text-uppercase text-light mb-3">
+                        More Than Just Reps: <span class="text-warning">The S Cube Edge</span>
+                    </h2>
+                    <p class="text-light-50 mb-3">
+                        Most gyms stop at rows of dumbbells. At S Cube, training is holistic. We house state-of-the-art
+                        plate-loaded equipment, cardiovascular consoles, a dedicated multi-format studio for Zumba and
+                        Yoga, and cold immersion hydrotherapy under one unified roof.
+                    </p>
+                    <p class="text-light-50 mb-4">
+                        Whether you are an athlete prepping for competition, a beginner seeking posture rehab, or a
+                        professional burning off desk fatigue, our certified trainers guide your progress using
+                        structured metrics.
+                    </p>
+
+                    <div class="d-flex gap-4">
+                        <div>
+                            <i class="bi bi-shield-fill-check text-warning fs-3 mb-1 d-block"></i>
+                            <h6 class="fw-bold text-light">Certified Safety</h6>
+                            <p class="text-secondary small mb-0">CPR/AED trained staff.</p>
+                        </div>
+                        <div>
+                            <i class="bi bi-moisture text-warning fs-3 mb-1 d-block"></i>
+                            <h6 class="fw-bold text-light">Clean Hygiene</h6>
+                            <p class="text-secondary small mb-0">Hourly air & gear sanitize.</p>
+                        </div>
+                        <div>
+                            <i class="bi bi-clock-history text-warning fs-3 mb-1 d-block"></i>
+                            <h6 class="fw-bold text-light">Flexible Hours</h6>
+                            <p class="text-secondary small mb-0">Early morning to late night.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5 border-top border-secondary border-opacity-25" id="fitpass">
+            <div class="text-center mb-5">
+                <span class="badge gold-badge px-3 py-2 text-uppercase mb-2 fw-bold">Official Partner</span>
+                <h2 class="display-5 fw-bold text-uppercase text-light mb-2">
+                    Workout With Your <span class="text-warning">FITPASS</span>
+                </h2>
+                <p class="text-secondary lead">
+                    Use your active FITPASS membership to train at S Cube Fitness with zero extra fees.
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-7">
+                    <div
+                        class="scube-card p-4 p-md-5 rounded-4 h-100 d-flex flex-column justify-content-between position-relative overflow-hidden">
+                        <div
+                            class="position-absolute top-0 end-0 bg-warning text-dark fw-bold text-uppercase small px-3 py-1 rounded-bottom-start-3">
+                            Authorized Studio
+                        </div>
+
+                        <div>
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <div class="rounded-3 bg-black border border-warning p-2 d-flex align-items-center justify-content-center"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="bi bi-qr-code-scan text-warning fs-2"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h3 fw-bold text-light mb-0">FITPASS Check-In</h3>
+                                    <span class="text-secondary small">Corporate & Retail Subscribers</span>
+                                </div>
+                            </div>
+
+                            <p class="text-light-50 mb-4">
+                                S Cube Fitness is fully integrated with the FITPASS network. Whether you hold a
+                                corporate perk plan or a direct subscription, you get full access to our 6,500 sq.ft
+                                floor, cardio stations, and recovery facilities.
+                            </p>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-sm-4">
+                                    <div
+                                        class="p-3 rounded-3 bg-black bg-opacity-60 border border-secondary border-opacity-50 text-center h-100">
+                                        <span class="d-block text-warning fw-bold fs-5 mb-1">Step 1</span>
+                                        <small class="text-secondary">Open your FITPASS mobile app</small>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div
+                                        class="p-3 rounded-3 bg-black bg-opacity-60 border border-secondary border-opacity-50 text-center h-100">
+                                        <span class="d-block text-warning fw-bold fs-5 mb-1">Step 2</span>
+                                        <small class="text-secondary">Scan the desk QR at reception</small>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div
+                                        class="p-3 rounded-3 bg-black bg-opacity-60 border border-secondary border-opacity-50 text-center h-100">
+                                        <span class="d-block text-warning fw-bold fs-5 mb-1">Step 3</span>
+                                        <small class="text-secondary">Show green pass to enter</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-4">
+                                <li class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-check-circle-fill text-warning"></i>
+                                    Access includes full free-weights, biomechanical machines, and cardio zones.
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-check-circle-fill text-warning"></i>
+                                    Valid across all daily operational hours.
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-check-circle-fill text-warning"></i>
+                                    Access to locker rooms and post-workout steam suites included.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div
+                            class="d-flex flex-column flex-sm-row gap-3 pt-3 border-top border-secondary border-opacity-25">
+                            <a href="https://fitpass.co.in" target="_blank"
+                                class="btn btn-warning fw-bold py-2 px-4 w-100 d-flex align-items-center justify-content-center gap-2">
+                                Open FITPASS Website <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+                            <a href="tel:+919999999999"
+                                class="btn btn-outline-warning fw-bold py-2 px-4 w-100 d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-telephone-fill"></i> Check-in Support
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="scube-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold text-light mb-2">Front Desk Verification</h4>
+                            <p class="text-secondary small mb-4">
+                                Have questions regarding corporate coverage, slot reservation, or batch eligibility
+                                through FITPASS? Reach our desk directly.
+                            </p>
+
+                            <!-- Embedded Studio Map -->
+                            <div class="rounded-3 overflow-hidden border border-secondary border-opacity-50 mb-4"
+                                style="height: 180px;">
+                                <iframe title="S Cube Fitness Studio Location"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4301.426931010512!2d73.85755217572283!3d18.6754994824484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c9006083917d%3A0xfb855deba78ab52e!2sS%20Cube%20Fitness!5e1!3m2!1sen!2sin!4v1790101201702!5m2!1sen!2sin"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+
+                            <div class="d-flex flex-column gap-3 mb-4">
+                                <div class="d-flex align-items-start gap-3">
+                                    <i class="bi bi-geo-alt-fill text-warning fs-5"></i>
+                                    <div>
+                                        <span class="d-block text-light fw-semibold small">S Cube Studio Partner
+                                            Center</span>
+                                        <small class="text-secondary">Plot No. 42, Metro Pillar 114, Main Avenue Road,
+                                            Pune</small>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-start gap-3">
+                                    <i class="bi bi-clock-fill text-warning fs-5"></i>
+                                    <div>
+                                        <span class="d-block text-light fw-semibold small">Operational Hours</span>
+                                        <small class="text-secondary">Mon - Sat: 5:30 AM – 10:30 PM</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/919999999999?text=Hi%20S%20Cube%20Fitness,%20I%20have%20a%20query%20regarding%20FITPASS%20check-in."
+                            target="_blank"
+                            class="btn btn-dark border-secondary text-light w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                            <i class="bi bi-whatsapp text-success fs-5"></i> Chat via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Member Testimonials Carousel Section -->
+        <section class="container py-5 border-top border-secondary border-opacity-25" id="reviews">
+            <div class="text-center mb-5">
+                <span class="badge gold-badge px-3 py-2 text-uppercase mb-2 fw-bold">Testimonials</span>
+                <h2 class="h1 fw-bold text-uppercase text-light mb-2">Member Experiences</h2>
+                <p class="text-secondary lead">Real feedback from athletes, professionals, and daily gym-goers.</p>
+            </div>
+
+            <!-- Bootstrap Sliding Carousel -->
+            <div id="reviewsCarousel" class="carousel slide pb-5" data-bs-ride="carousel" data-bs-interval="4500">
+
+                <!-- Slide Indicators / Dots -->
+                <div class="carousel-indicators mb-0">
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Carousel Slides -->
+                <div class="carousel-inner px-md-5">
+
+                    <!-- SLIDE 1 (Reviews 1 & 2) -->
+                    <div class="carousel-item active">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-6">
+                                <div class="review-card p-4 h-100 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <div class="text-warning mb-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-light-50 small mb-4">
+                                            "The sheer scale of the 6,500 sq.ft gym floor means you never wait for
+                                            benches or squat racks even during peak evening rush. The contrast recovery
+                                            suites and ice baths after heavy lifting sessions are total game-changers."
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-person-circle fs-2 text-warning"></i>
+                                        <div>
+                                            <h6 class="fw-bold text-light mb-0">Rohan Singh</h6>
+                                            <small class="text-secondary">Powerlifting Member (2 yrs)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="review-card p-4 h-100 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <div class="text-warning mb-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-light-50 small mb-4">
+                                            "Zumba batches here are super high-energy and fun! The instructors actually
+                                            pay attention to posture and rhythm rather than just turning up speakers.
+                                            Locker rooms are spotless and check-ins are seamless."
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-person-circle fs-2 text-warning"></i>
+                                        <div>
+                                            <h6 class="fw-bold text-light mb-0">Pranita Gaud</h6>
+                                            <small class="text-secondary">Cardio & Zumba Regular</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 (Reviews 3 & 4) -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-6">
+                                <div class="review-card p-4 h-100 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <div class="text-warning mb-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-light-50 small mb-4">
+                                            "I scan in with my corporate FITPASS 4 days a week. The front desk staff
+                                            verifies the entry code within 5 seconds with zero hassle. Truly
+                                            top-of-the-line plate-loaded machinery you don't find elsewhere."
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-person-circle fs-2 text-warning"></i>
+                                        <div>
+                                            <h6 class="fw-bold text-light mb-0">Prathamesh Thakare</h6>
+                                            <small class="text-secondary">FITPASS Subscriber</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="review-card p-4 h-100 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <div class="text-warning mb-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <p class="text-light-50 small mb-4">
+                                            "Joined S Cube for personal training after suffering a rotator cuff strain.
+                                            Rahul customized my movement mechanics and functional exercises to rebuild
+                                            shoulder stability safely without pain."
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-person-circle fs-2 text-warning"></i>
+                                        <div>
+                                            <h6 class="fw-bold text-light mb-0">Pranita Gaud</h6>
+                                            <small class="text-secondary">Personal Training Member</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 (Reviews 5 & 6) -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-6">
+                                <div class="review-card p-4 h-100 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <div class="text-warning mb-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-light-50 small mb-4">
+                                            "The atmosphere is motivating without being intimidating for beginners. The
+                                            lighting, clean equipment, and energetic playlist keep you focused on your
+                                            sets. The steam room on weekends is the best detox."
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-person-circle fs-2 text-warning"></i>
+                                        <div>
+                                            <h6 class="fw-bold text-light mb-0">Rohan Singh</h6>
+                                            <small class="text-secondary">Yearly Member</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="review-card p-4 h-100 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <div class="text-warning mb-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-light-50 small mb-4">
+                                            "Hands down the cleanest gym in the area. Sanitization stations are
+                                            everywhere, weights are reracked, and the trainers are genuinely
+                                            approachable. You get genuine premium value for your membership."
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-person-circle fs-2 text-warning"></i>
+                                        <div>
+                                            <h6 class="fw-bold text-light mb-0">Prem Thakare</h6>
+                                            <small class="text-secondary">Strength & Fitness Member</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Custom Gold Carousel Nav Controls -->
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                    data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                    <i class="bi bi-chevron-left fs-3 text-warning"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                    data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                    <i class="bi bi-chevron-right fs-3 text-warning"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
