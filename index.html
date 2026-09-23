@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>S Cube Fitness - Login</title>
+    <title>S Cube Fitness - Register</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,14 +12,14 @@
 
     <style>
         body {
-            background-color: #111111;
+            background: #111111;
             font-family: Arial;
         }
 
-        .login-box {
+        .register-box {
             width: 350px;
             margin: auto;
-            margin-top: 40px;
+            margin-top: 30px;
             background: #222222;
             padding: 25px;
             border-radius: 10px;
@@ -46,14 +46,14 @@
             margin-bottom: 15px;
         }
 
-        .btn-login {
+        .btn-register {
             width: 100%;
             background: gold;
             color: black;
             font-weight: bold;
         }
 
-        .btn-login:hover {
+        .btn-register:hover {
             background: orange;
         }
 
@@ -73,35 +73,34 @@
 
 <body>
 
-    <div class="login-box">
+    <div class="register-box">
 
-         <img src="Gym_Logo.jpeg" class="brand-logo img-fluid" alt="S Cube Fitness Logo">
+        <img src="Gym_Logo.jpeg" class="brand-logo img-fluid" alt="S Cube Fitness Logo">
 
-        <h2>Member Login</h2>
+        <h2>Member Registration</h2>
 
-        <form id="loginForm">
+        <form id="registerForm">
+
+            <label>Full Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter Full Name" required>
 
             <label>Mobile Number</label>
-
             <input type="tel" id="mobile" class="form-control" placeholder="Enter 10 digit Mobile Number" maxlength="10"
                 inputmode="numeric" required>
 
             <label>Password</label>
-
             <input type="password" id="password" class="form-control" placeholder="Enter Password" required>
 
-            <input type="checkbox" onclick="showPassword()">
-            <span style="color:white;">Show Password</span>
+            <label>Confirm Password</label>
+            <input type="password" id="confirm" class="form-control" placeholder="Re-enter Password" required>
 
-            <br><br>
-
-            <button type="submit" class="btn btn-login">
-                Login
+            <button type="submit" class="btn btn-register">
+                Register
             </button>
 
             <p>
-                New User?
-                <a href="Register_Page.html">Register Here</a>
+                Already have an account?
+                <a href="Login_Page.html">Login Here</a>
             </p>
 
         </form>
@@ -110,7 +109,8 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+        import { getAuth, createUserWithEmailAndPassword, deleteUser } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyAUuV9raC17M7YiUAazJzAv1TL9tg4Nst8",
@@ -123,59 +123,91 @@
 
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
+        const db = getFirestore(app);
 
         function mobileToEmail(mobile) {
             return mobile + "@scubefitness.app";
         }
 
-        const loginForm = document.getElementById("loginForm");
+        const registerForm = document.getElementById("registerForm");
 
-        loginForm.addEventListener("submit", async (event) => {
+        registerForm.addEventListener("submit", async (event) => {
             event.preventDefault();
 
+            const name = document.getElementById("name").value.trim();
             const mobile = document.getElementById("mobile").value.trim();
             const password = document.getElementById("password").value;
+            const confirm = document.getElementById("confirm").value;
+
+            if (name === "") {
+                alert("Enter Name");
+                return;
+            }
 
             if (!/^\d{10}$/.test(mobile)) {
                 alert("Mobile Number must be exactly 10 digits");
                 return;
             }
 
-            if (password === "") {
-                alert("Enter Password");
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters");
                 return;
             }
 
-            const button = document.querySelector(".btn-login");
+            if (password !== confirm) {
+                alert("Passwords do not match");
+                return;
+            }
+
+            const button = document.querySelector(".btn-register");
             button.disabled = true;
-            button.textContent = "Logging in...";
+            button.textContent = "Registering...";
+
+            let user = null;
 
             try {
-                await signInWithEmailAndPassword(auth, mobileToEmail(mobile), password);
-                alert("Login Successful");
-                window.location.href = "index.html";
+                const result = await createUserWithEmailAndPassword(
+                    auth,
+                    mobileToEmail(mobile),
+                    password
+                );
+
+                user = result.user;
+
+                await setDoc(doc(db, "members", user.uid), {
+                    name: name,
+                    mobile: mobile,
+                    createdAt: new Date().toISOString()
+                });
+
+                alert("Registration Successful");
+                window.location.href = "Home_Page.html";
             } catch (error) {
                 console.error(error);
 
-                if (error.code === "auth/invalid-credential" ||
-                    error.code === "auth/user-not-found" ||
-                    error.code === "auth/wrong-password") {
-                    alert("Invalid mobile number or password");
-                } else if (error.code === "auth/too-many-requests") {
-                    alert("Too many attempts. Please try again later.");
+                // Avoid leaving an Auth account behind if the Firestore write failed.
+                if (user) {
+                    try {
+                        await deleteUser(user);
+                    } catch (cleanupError) {
+                        console.error("Cleanup error:", cleanupError);
+                    }
+                }
+
+                if (error.code === "auth/email-already-in-use") {
+                    alert("This mobile number is already registered.");
+                } else if (error.code === "auth/weak-password") {
+                    alert("Password must be at least 6 characters.");
+                } else if (error.code === "permission-denied") {
+                    alert("Firestore permission denied. Check your Firestore rules.");
                 } else {
-                    alert("Login failed: " + error.message);
+                    alert("Registration failed: " + error.message);
                 }
             } finally {
                 button.disabled = false;
-                button.textContent = "Login";
+                button.textContent = "Register";
             }
         });
-
-        window.showPassword = function () {
-            const input = document.getElementById("password");
-            input.type = input.type === "password" ? "text" : "password";
-        };
     </script>
 </body>
 
