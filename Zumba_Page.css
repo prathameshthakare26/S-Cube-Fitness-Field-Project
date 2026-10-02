@@ -568,10 +568,6 @@ td:nth-child(2) {
     margin-bottom: 30px;
 }
 
-/* =========================================
-   ZUMBA PLANS
-========================================= */
-
 .plans-section {
     padding: 100px 5%;
     background: #080808;
@@ -677,10 +673,6 @@ td:nth-child(2) {
     background: var(--gold);
     color: #000;
 }
-
-/* =========================================
-   ZUMBA PAYMENT
-========================================= */
 
 .zumba-payment-section {
     width: min(1100px, 92%);
