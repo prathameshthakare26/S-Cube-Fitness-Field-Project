@@ -185,7 +185,6 @@
             } catch (error) {
                 console.error(error);
 
-                // Avoid leaving an Auth account behind if the Firestore write failed.
                 if (user) {
                     try {
                         await deleteUser(user);

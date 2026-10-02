@@ -15,9 +15,6 @@
      overflow-x: hidden;
  }
 
- /* =====================================
-           NAVBAR (Unified Style)
-        ====================================== */
  .backdrop-blur {
      backdrop-filter: blur(10px);
      -webkit-backdrop-filter: blur(10px);
@@ -51,9 +48,6 @@
      box-shadow: 0 0 0 0.25rem rgba(255, 210, 26, 0.25);
  }
 
- /* =====================================
-           BACKGROUND
-        ====================================== */
  body::before {
      content: "";
      position: fixed;
@@ -84,9 +78,6 @@
      background-size: 50px 50px;
  }
 
- /* =====================================
-           MAIN CONTAINER
-        ====================================== */
  .main-container {
      width: 100%;
      max-width: 1250px;
@@ -94,9 +85,6 @@
      padding: 20px 24px 60px;
  }
 
- /* =====================================
-           HERO
-        ====================================== */
  .hero {
      text-align: center;
      padding: 25px 0 35px;
@@ -135,18 +123,12 @@
      animation: goldPulse 2s infinite;
  }
 
- /* =====================================
-           PLANS
-        ====================================== */
  .plans {
      display: grid;
      grid-template-columns: repeat(4, 1fr);
      gap: 16px;
  }
 
- /* =====================================
-           CARD
-        ====================================== */
  .membership-card {
      position: relative;
      border: 1px solid rgba(255, 210, 26, .70);
@@ -182,9 +164,6 @@
      box-shadow: 0 18px 45px rgba(0, 0, 0, .70), 0 0 22px rgba(255, 210, 26, .10);
  }
 
- /* =====================================
-           IMAGE
-        ====================================== */
  .card-image {
      position: relative;
      height: 210px;
@@ -233,9 +212,6 @@
      left: 140%;
  }
 
- /* =====================================
-           CARD CONTENT
-        ====================================== */
  .card-content {
      position: relative;
      z-index: 5;
@@ -284,9 +260,6 @@
      margin-bottom: 12px;
  }
 
- /* =====================================
-           BENEFITS
-        ====================================== */
  .benefits {
      text-align: left;
      padding: 0 6px;
@@ -322,9 +295,6 @@
      font-weight: bold;
  }
 
- /* =====================================
-           BUY BUTTON
-        ====================================== */
  .btn-buy {
      width: 100%;
      border: 0;
@@ -367,9 +337,6 @@
      box-shadow: 0 9px 24px rgba(255, 210, 26, .22);
  }
 
- /* =====================================
-           STEAM SECTION
-        ====================================== */
  .steam-section {
      display: grid;
      grid-template-columns: 1.15fr 1.7fr 1fr;
@@ -440,9 +407,6 @@
      padding: 20px;
  }
 
- /* =====================================
-           PAYMENT
-        ====================================== */
  .payment-section {
      display: grid;
      grid-template-columns: 1.1fr .9fr;
@@ -543,9 +507,6 @@
      line-height: 1.5;
  }
 
- /* =====================================
-           QR
-        ====================================== */
  .payment-right {
      padding: 32px;
      display: flex;
@@ -630,9 +591,6 @@
      border-color: #ffd21a;
  }
 
- /* =====================================
-           FOOTER
-        ====================================== */
  .bottom {
      display: flex;
      justify-content: space-between;
@@ -667,9 +625,6 @@
      line-height: 1.8;
  }
 
- /* =====================================
-           ANIMATIONS
-        ====================================== */
  @keyframes heroAppear {
      from {
          opacity: 0;
@@ -706,9 +661,6 @@
      }
  }
 
- /* =====================================
-           RESPONSIVE DESIGN
-        ====================================== */
  @media(max-width: 1000px) {
      .plans {
          grid-template-columns: repeat(2, 1fr);

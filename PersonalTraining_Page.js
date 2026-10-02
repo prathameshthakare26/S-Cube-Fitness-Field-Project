@@ -1,10 +1,3 @@
-/* =====================================================
-   PERSONAL TRAINING BOOKING
-   ===================================================== */
-
-
-/* Get required elements */
-
 const bookingModal =
     document.getElementById("bookingModal");
 
@@ -29,48 +22,24 @@ const bookingMessage =
 const bookButtons =
     document.querySelectorAll(".book-btn");
 
-
-/* =====================================================
-   SET MINIMUM DATE
-   ===================================================== */
-
-/*
-   This prevents the user from selecting
-   a date in the past.
-*/
-
 const today =
     new Date().toISOString().split("T")[0];
 
 bookingDate.min = today;
 
-
-/* =====================================================
-   OPEN BOOKING MODAL
-   ===================================================== */
-
 bookButtons.forEach(function (button) {
 
     button.addEventListener("click", function () {
-
-        /* Get trainer name from button */
 
         const trainerName =
             button.getAttribute("data-trainer");
 
 
-        /* Put trainer name inside form */
-
         selectedTrainer.value =
             trainerName;
 
-
-        /* Clear old message */
-
         bookingMessage.textContent = "";
 
-
-        /* Open modal */
 
         bookingModal.classList.add("show");
 
@@ -78,19 +47,11 @@ bookButtons.forEach(function (button) {
 
 });
 
-
-/* =====================================================
-   CLOSE MODAL
-   ===================================================== */
-
 closeBooking.addEventListener("click", function () {
 
     bookingModal.classList.remove("show");
 
 });
-
-
-/* Close modal when clicking outside the box */
 
 bookingModal.addEventListener("click", function (event) {
 
@@ -102,19 +63,9 @@ bookingModal.addEventListener("click", function (event) {
 
 });
 
-
-/* =====================================================
-   FORM SUBMISSION
-   ===================================================== */
-
 bookingForm.addEventListener("submit", function (event) {
 
-    /* Prevent page refresh */
-
     event.preventDefault();
-
-
-    /* Get form values */
 
     const name =
         document.getElementById("memberName").value.trim();
@@ -132,10 +83,6 @@ bookingForm.addEventListener("submit", function (event) {
         selectedTrainer.value;
 
 
-    /* =================================================
-       BASIC VALIDATION
-       ================================================= */
-
     if (name === "") {
 
         alert("Please enter your name.");
@@ -144,8 +91,6 @@ bookingForm.addEventListener("submit", function (event) {
 
     }
 
-
-    /* Check mobile number */
 
     if (!/^[0-9]{10}$/.test(phone)) {
 
@@ -173,11 +118,6 @@ bookingForm.addEventListener("submit", function (event) {
 
     }
 
-
-    /* =================================================
-       CREATE BOOKING OBJECT
-       ================================================= */
-
     const booking = {
 
         name: name,
@@ -192,48 +132,22 @@ bookingForm.addEventListener("submit", function (event) {
 
     };
 
-
-    /* =================================================
-       GET EXISTING BOOKINGS
-       ================================================= */
-
     let bookings =
         JSON.parse(
             localStorage.getItem("scubeGymBookings")
         ) || [];
 
-
-    /* =================================================
-       ADD NEW BOOKING
-       ================================================= */
-
     bookings.push(booking);
-
-
-    /* =================================================
-       SAVE BOOKING
-       ================================================= */
 
     localStorage.setItem(
         "scubeGymBookings",
         JSON.stringify(bookings)
     );
 
-
-    /* =================================================
-       SUCCESS MESSAGE
-       ================================================= */
-
     bookingMessage.textContent =
         "Booking confirmed successfully!";
 
-
-    /* Clear form */
-
     bookingForm.reset();
-
-
-    /* Keep trainer name visible after reset */
 
     selectedTrainer.value = trainer;
 
