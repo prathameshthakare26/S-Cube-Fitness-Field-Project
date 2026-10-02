@@ -158,8 +158,7 @@ img {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.72),
-            rgba(0, 0, 0, 0.82)),
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
         url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1800&q=90");
     background-size: cover;
     background-position: center;
@@ -444,9 +443,7 @@ td:nth-child(2) {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top,
-            rgba(0, 0, 0, 0.65),
-            transparent 55%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent 55%);
     pointer-events: none;
 }
 
@@ -571,6 +568,10 @@ td:nth-child(2) {
     margin-bottom: 30px;
 }
 
+/* =========================================
+   ZUMBA PLANS
+========================================= */
+
 .plans-section {
     padding: 100px 5%;
     background: #080808;
@@ -658,19 +659,223 @@ td:nth-child(2) {
 
 .plan-btn {
     display: block;
+    width: 100%;
     text-align: center;
     padding: 11px;
     border: 1px solid var(--gold);
     border-radius: 5px;
     color: var(--gold-light);
+    background: transparent;
+    font-family: inherit;
     font-size: 13px;
     font-weight: bold;
+    cursor: pointer;
     transition: 0.3s ease;
 }
 
 .plan-btn:hover {
     background: var(--gold);
     color: #000;
+}
+
+/* =========================================
+   ZUMBA PAYMENT
+========================================= */
+
+.zumba-payment-section {
+    width: min(1100px, 92%);
+    margin: 35px auto 110px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 0;
+    border: 1px solid rgba(255, 210, 26, 0.65);
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #0c0c0c, #050505);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+    scroll-margin-top: 100px;
+}
+
+.zumba-payment-left {
+    padding: 32px;
+}
+
+.zumba-payment-title {
+    color: #ffd21a;
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.zumba-secure {
+    text-align: center;
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.zumba-payment-line {
+    height: 1px;
+    background: #2d2d2d;
+    margin-bottom: 20px;
+}
+
+.zumba-payment-label {
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.zumba-selected-box {
+    background: #151515;
+    border: 1px solid #303030;
+    border-radius: 8px;
+    padding: 13px 15px;
+    margin-bottom: 15px;
+}
+
+.zumba-selected-value {
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.zumba-selected-amount {
+    color: #ffd21a;
+    font-size: 29px;
+    font-weight: 900;
+}
+
+.zumba-pay-btn {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 13px;
+    background: #00b958;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.zumba-pay-btn:hover {
+    background: #00a54e;
+    transform: translateY(-2px);
+    box-shadow: 0 9px 22px rgba(0, 185, 88, 0.2);
+}
+
+.zumba-fallback {
+    display: none;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 210, 26, 0.45);
+    background: rgba(255, 210, 26, 0.07);
+    color: #dfc65f;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.zumba-payment-note {
+    margin-top: 14px;
+    margin-bottom: 0;
+    color: #777;
+    font-size: 11px;
+    text-align: center;
+}
+
+.zumba-payment-right {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.zumba-qrcode {
+    width: 210px;
+    height: 210px;
+    padding: 10px;
+    border-radius: 13px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zumba-qrcode img {
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+}
+
+.zumba-scan-text {
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin-top: 9px;
+}
+
+.zumba-upi-label {
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 17px;
+    margin-bottom: 6px;
+}
+
+.zumba-upi-box {
+    width: 100%;
+    padding: 11px;
+    background: #141414;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #ffd21a;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.zumba-copy-btn {
+    width: 100%;
+    margin-top: 9px;
+    padding: 10px;
+    border: 1px solid #ffd21a;
+    background: transparent;
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.zumba-copy-btn:hover {
+    background: #ffd21a;
+    color: #000;
+}
+
+.zumba-close-btn {
+    margin-top: 16px;
+    padding: 8px 24px;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.zumba-close-btn:hover {
+    color: #ffd21a;
+    border-color: #ffd21a;
 }
 
 footer {
@@ -776,6 +981,10 @@ footer {
         grid-template-columns: 1fr;
         max-width: 550px;
     }
+
+    .zumba-payment-section {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 600px) {
@@ -856,6 +1065,31 @@ footer {
 
     .plans-section {
         padding: 75px 5%;
+    }
+
+    .zumba-payment-section {
+        width: 92%;
+        margin-bottom: 75px;
+    }
+
+    .zumba-payment-left,
+    .zumba-payment-right {
+        padding: 23px 18px;
+    }
+
+    .zumba-payment-title {
+        font-size: 23px;
+        letter-spacing: 4px;
+    }
+
+    .zumba-qrcode {
+        width: 190px;
+        height: 190px;
+    }
+
+    .zumba-qrcode img {
+        width: 170px;
+        height: 170px;
     }
 
     .footer-content {

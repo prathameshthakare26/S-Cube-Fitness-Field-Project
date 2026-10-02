@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S Cube Fitness | Zumba</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap"
-        rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Zumba_Page.css">
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <nav
         class="navbar navbar-expand-lg navbar-dark bg-black bg-opacity-80 sticky-top border-bottom border-warning border-opacity-25 backdrop-blur rounded-bottom-4">
         <div class="container-fluid px-4">
             <a class="navbar-brand d-inline-flex align-items-center gap-2 fw-bold text-uppercase text-warning fs-3 mb-0"
                 href="Home_Page.html">
                 <img src="Gym_Logo.jpeg" class="brand-logo img-fluid" alt="S Cube Fitness Logo">
-
                 <span>S Cube <span class="text-white">Fitness</span></span>
             </a>
 
@@ -53,6 +53,7 @@
         </div>
     </nav>
 
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-background"></div>
 
@@ -67,16 +68,13 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="#plans" class="btn primary-btn">
-                    Join Zumba
-                </a>
-                <a href="#schedule" class="btn secondary-btn">
-                    View Schedule
-                </a>
+                <a href="#plans" class="btn primary-btn">Join Zumba</a>
+                <a href="#schedule" class="btn secondary-btn">View Schedule</a>
             </div>
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="about section-container" id="about">
         <div class="about-image">
             <img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=900&q=85"
@@ -115,6 +113,7 @@
         </div>
     </section>
 
+    <!-- BENEFITS -->
     <section class="benefits-section">
         <div class="section-heading">
             <p class="section-label">WHY ZUMBA?</p>
@@ -129,59 +128,42 @@
             <article class="benefit-card">
                 <div class="benefit-number">01</div>
                 <h3>Full Body Workout</h3>
-                <p>
-                    Engage multiple muscle groups through continuous
-                    dance and fitness movements.
-                </p>
+                <p>Engage multiple muscle groups through continuous dance and fitness movements.</p>
             </article>
 
             <article class="benefit-card">
                 <div class="benefit-number">02</div>
                 <h3>Burns Calories</h3>
-                <p>
-                    High-energy sessions help increase activity levels
-                    and support calorie burning.
-                </p>
+                <p>High-energy sessions help increase activity levels and support calorie burning.</p>
             </article>
 
             <article class="benefit-card">
                 <div class="benefit-number">03</div>
                 <h3>Improves Flexibility</h3>
-                <p>
-                    Regular movement can help improve mobility,
-                    coordination and flexibility.
-                </p>
+                <p>Regular movement can help improve mobility, coordination and flexibility.</p>
             </article>
 
             <article class="benefit-card">
                 <div class="benefit-number">04</div>
                 <h3>Builds Stamina</h3>
-                <p>
-                    Consistent sessions help improve cardiovascular
-                    endurance and overall stamina.
-                </p>
+                <p>Consistent sessions help improve cardiovascular endurance and overall stamina.</p>
             </article>
 
             <article class="benefit-card">
                 <div class="benefit-number">05</div>
                 <h3>Stress Relief</h3>
-                <p>
-                    Music, movement and exercise create an energetic
-                    environment that can help reduce daily stress.
-                </p>
+                <p>Music, movement and exercise create an energetic environment that can help reduce daily stress.</p>
             </article>
 
             <article class="benefit-card">
                 <div class="benefit-number">06</div>
-                <h3>Fun & Energetic</h3>
-                <p>
-                    Enjoy an engaging workout atmosphere that keeps
-                    exercise motivating and exciting.
-                </p>
+                <h3>Fun &amp; Energetic</h3>
+                <p>Enjoy an engaging workout atmosphere that keeps exercise motivating and exciting.</p>
             </article>
         </div>
     </section>
 
+    <!-- SCHEDULE -->
     <section class="schedule-section" id="schedule">
         <div class="section-heading">
             <p class="section-label">WEEKLY TIMETABLE</p>
@@ -244,6 +226,7 @@
         </div>
     </section>
 
+    <!-- TRAINERS -->
     <section class="trainer-section">
         <div class="trainer-slider">
             <div class="trainer-slide active-slide">
@@ -266,12 +249,8 @@
                     alt="Arjun Malhotra">
             </div>
 
-            <button class="slider-btn prev-btn" onclick="previousTrainer()">
-                &#10094;
-            </button>
-            <button class="slider-btn next-btn" onclick="nextTrainer()">
-                &#10095;
-            </button>
+            <button class="slider-btn prev-btn" onclick="previousTrainer()" type="button">&#10094;</button>
+            <button class="slider-btn next-btn" onclick="nextTrainer()" type="button">&#10095;</button>
 
             <div class="slider-dots">
                 <span class="dot active-dot" onclick="showTrainer(0)"></span>
@@ -286,9 +265,7 @@
             <h2>Train With <span>Experience</span></h2>
 
             <h3 id="trainerName">Neha Sharma</h3>
-            <p class="trainer-role" id="trainerRole">
-                Certified Zumba Instructor
-            </p>
+            <p class="trainer-role" id="trainerRole">Certified Zumba Instructor</p>
             <p id="trainerDescription">
                 Our Zumba sessions are guided by an experienced fitness
                 professional who focuses on proper movement, energy,
@@ -313,86 +290,175 @@
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta-section">
         <p class="section-label">START YOUR JOURNEY</p>
         <h2>Ready to Dance Your Way to Fitness?</h2>
-        <p>
-            Join an energetic Zumba community and make every workout count.
-        </p>
-        <a href="#plans" class="btn primary-btn">
-            Join Zumba Today
-        </a>
+        <p>Join an energetic Zumba community and make every workout count.</p>
+        <a href="#plans" class="btn primary-btn">Join Zumba Today</a>
     </section>
 
+    <!-- ZUMBA PLANS -->
     <section class="plans-section" id="plans">
         <div class="section-heading">
             <p class="section-label">CHOOSE YOUR PLAN</p>
             <h2>Join Zumba <span>Today</span></h2>
-            <p>
-                Select the membership plan that suits your fitness goals.
-            </p>
+            <p>Select the Zumba plan that suits your fitness goals.</p>
         </div>
 
         <div class="plans-grid">
+
+            <!-- BASIC -->
             <article class="plan-card">
                 <p class="plan-type">STARTER</p>
                 <h3>Zumba Basic</h3>
-                <div class="plan-price">
-                    ₹999 <span>/ month</span>
-                </div>
+                <div class="plan-price">₹999 <span>/ month</span></div>
+
                 <ul>
                     <li>✓ Zumba Classes</li>
                     <li>✓ 2 Sessions / Week</li>
                     <li>✓ Beginner Friendly</li>
                     <li>✓ Fitness Guidance</li>
                 </ul>
-                <a href="Membership.html" class="plan-btn">
+
+                <button type="button" class="plan-btn" onclick="showZumbaPayment('Zumba Basic', 999)">
                     Select Plan
-                </a>
+                </button>
             </article>
 
+            <!-- PLUS -->
             <article class="plan-card featured-plan">
-                <div class="popular-label">
-                    MOST POPULAR
-                </div>
+                <div class="popular-label">MOST POPULAR</div>
                 <p class="plan-type">STANDARD</p>
                 <h3>Zumba Plus</h3>
-                <div class="plan-price">
-                    ₹1,499 <span>/ month</span>
-                </div>
+                <div class="plan-price">₹1,499 <span>/ month</span></div>
+
                 <ul>
                     <li>✓ Unlimited Zumba</li>
                     <li>✓ 4 Sessions / Week</li>
                     <li>✓ Fitness Guidance</li>
                     <li>✓ Flexible Timings</li>
                 </ul>
-                <a href="Membership.html" class="plan-btn">
+
+                <button type="button" class="plan-btn" onclick="showZumbaPayment('Zumba Plus', 1499)">
                     Select Plan
-                </a>
+                </button>
             </article>
 
+            <!-- PRO -->
             <article class="plan-card">
                 <p class="plan-type">PREMIUM</p>
                 <h3>Zumba Pro</h3>
-                <div class="plan-price">
-                    ₹1,999 <span>/ month</span>
-                </div>
+                <div class="plan-price">₹1,999 <span>/ month</span></div>
+
                 <ul>
                     <li>✓ Unlimited Classes</li>
                     <li>✓ Priority Booking</li>
                     <li>✓ Personal Guidance</li>
                     <li>✓ Full Fitness Support</li>
                 </ul>
-                <a href="Membership.html" class="plan-btn">
+
+                <button type="button" class="plan-btn" onclick="showZumbaPayment('Zumba Pro', 1999)">
                     Select Plan
-                </a>
+                </button>
             </article>
+
         </div>
     </section>
+
+    <!-- ZUMBA PAYMENT -->
+    <section id="zumbaPaymentBox" class="zumba-payment-section" style="display:none;">
+
+        <div class="zumba-payment-left">
+
+            <div class="zumba-payment-title">S CUBE FITNESS</div>
+
+            <div class="zumba-secure">SECURE ZUMBA PAYMENT</div>
+
+            <div class="zumba-payment-line"></div>
+
+            <div class="zumba-payment-label">Selected Plan</div>
+
+            <div class="zumba-selected-box">
+                <div id="zumbaSelectedPlan" class="zumba-selected-value">-</div>
+            </div>
+
+            <div class="zumba-payment-label">Amount</div>
+
+            <div class="zumba-selected-box">
+                <div id="zumbaSelectedAmount" class="zumba-selected-amount">-</div>
+            </div>
+
+            <button type="button" class="zumba-pay-btn" onclick="openZumbaUPI()">
+                <i class="bi bi-phone"></i>
+                Pay with any UPI App
+            </button>
+
+            <div id="zumbaFallbackMessage" class="zumba-fallback">
+                If your browser does not open the UPI app, scan the QR code
+                or copy the UPI ID below.
+            </div>
+
+            <p class="zumba-payment-note">
+                Payment is optional. You can close this section and choose another plan anytime.
+            </p>
+
+        </div>
+
+        <div class="zumba-payment-right">
+
+            <div id="zumbaQRCode" class="zumba-qrcode"></div>
+
+            <div class="zumba-scan-text">
+                Scan &amp; Pay<br>
+                using any UPI app
+            </div>
+
+            <div class="zumba-upi-label">UPI ID</div>
+
+            <div class="zumba-upi-box" id="zumbaUpiDisplay">
+                rohanvijay321-1@oksbi
+            </div>
+
+            <button type="button" class="zumba-copy-btn" onclick="copyZumbaUPI()">
+                Copy UPI ID
+            </button>
+
+            <button type="button" class="zumba-close-btn" onclick="closeZumbaPayment()">
+                Close
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>S CUBE FITNESS</h3>
+                <p>ZUMBA • FITNESS • CONSISTENCY</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="Home_Page.html">Home</a>
+                <a href="Membership_Page.html">Membership</a>
+                <a href="About_Page.html">About</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2026 S Cube Fitness. All rights reserved.
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        /* ================================
+           TRAINER SLIDER
+        ================================= */
+
         let currentTrainer = 0;
 
         const trainers = [
@@ -426,22 +492,23 @@
             }
         ];
 
-        function showTrainer(Home_Page) {
-            currentTrainer = Home_Page;
+        function showTrainer(index) {
+            currentTrainer = index;
+
             const slides = document.querySelectorAll(".trainer-slide");
             const dots = document.querySelectorAll(".dot");
 
             slides.forEach(slide => slide.classList.remove("active-slide"));
             dots.forEach(dot => dot.classList.remove("active-dot"));
 
-            slides[Home_Page].classList.add("active-slide");
-            dots[Home_Page].classList.add("active-dot");
+            if (slides[index]) slides[index].classList.add("active-slide");
+            if (dots[index]) dots[index].classList.add("active-dot");
 
-            document.getElementById("trainerName").textContent = trainers[Home_Page].name;
-            document.getElementById("trainerRole").textContent = trainers[Home_Page].role;
-            document.getElementById("trainerDescription").textContent = trainers[Home_Page].description;
-            document.getElementById("trainerExperience").textContent = trainers[Home_Page].experience;
-            document.getElementById("trainerSessions").textContent = trainers[Home_Page].sessions;
+            document.getElementById("trainerName").textContent = trainers[index].name;
+            document.getElementById("trainerRole").textContent = trainers[index].role;
+            document.getElementById("trainerDescription").textContent = trainers[index].description;
+            document.getElementById("trainerExperience").textContent = trainers[index].experience;
+            document.getElementById("trainerSessions").textContent = trainers[index].sessions;
         }
 
         function nextTrainer() {
@@ -455,7 +522,103 @@
         }
 
         setInterval(nextTrainer, 4000);
+
+
+        /* ================================
+           ZUMBA UPI PAYMENT
+        ================================= */
+
+        const ZUMBA_UPI_ID = "rohanvijay321-1@oksbi";
+        const ZUMBA_BUSINESS_NAME = "S Cube Fitness";
+
+        let zumbaPaymentURL = "";
+        let selectedZumbaPlan = "";
+        let selectedZumbaAmount = 0;
+
+        function showZumbaPayment(plan, amount) {
+
+            selectedZumbaPlan = plan;
+            selectedZumbaAmount = amount;
+
+            document.getElementById("zumbaSelectedPlan").innerText =
+                plan + " Membership";
+
+            document.getElementById("zumbaSelectedAmount").innerText =
+                "₹" + amount.toLocaleString("en-IN");
+
+            zumbaPaymentURL =
+                "upi://pay" +
+                "?pa=" + encodeURIComponent(ZUMBA_UPI_ID) +
+                "&pn=" + encodeURIComponent(ZUMBA_BUSINESS_NAME) +
+                "&am=" + encodeURIComponent(amount) +
+                "&cu=INR" +
+                "&tn=" + encodeURIComponent(plan + " Membership");
+
+            const qrURL =
+                "https://api.qrserver.com/v1/create-qr-code/" +
+                "?size=220x220&data=" +
+                encodeURIComponent(zumbaPaymentURL);
+
+            document.getElementById("zumbaQRCode").innerHTML =
+                '<img src="' + qrURL + '" alt="Zumba UPI QR Code">';
+
+            const payment = document.getElementById("zumbaPaymentBox");
+            payment.style.display = "grid";
+
+            document.getElementById("zumbaFallbackMessage").style.display = "none";
+
+            setTimeout(function () {
+                payment.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }, 100);
+        }
+
+        function openZumbaUPI() {
+
+            if (zumbaPaymentURL === "") {
+                alert("Please select a Zumba plan first.");
+                return;
+            }
+
+            document.getElementById("zumbaFallbackMessage").style.display = "block";
+
+            window.location.href = zumbaPaymentURL;
+        }
+
+        function copyZumbaUPI() {
+
+            if (navigator.clipboard && window.isSecureContext) {
+
+                navigator.clipboard.writeText(ZUMBA_UPI_ID)
+                    .then(function () {
+                        alert("UPI ID copied successfully!");
+                    })
+                    .catch(function () {
+                        alert("UPI ID: " + ZUMBA_UPI_ID);
+                    });
+
+            } else {
+                alert("UPI ID: " + ZUMBA_UPI_ID);
+            }
+        }
+
+        function closeZumbaPayment() {
+
+            document.getElementById("zumbaPaymentBox").style.display = "none";
+
+            const plans = document.getElementById("plans");
+
+            setTimeout(function () {
+                plans.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 50);
+        }
     </script>
+
 </body>
 
 </html>
