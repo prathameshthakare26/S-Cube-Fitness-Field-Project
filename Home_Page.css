@@ -3,11 +3,6 @@
     --gold-hover: #ffd54f;
     --gold-btn: #c98a00;
     --gold-btn-hover: #e09b00;
-    --dark: #0b0b0b;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 html {
@@ -16,10 +11,7 @@ html {
 
 body {
     font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
-    background-color: var(--dark);
 }
 
 .text-light-50 {
@@ -33,8 +25,6 @@ body {
 .hero-bg-overlay {
     position: fixed;
     inset: 0;
-    width: 100%;
-    height: 100vh;
     background:
         linear-gradient(180deg, rgba(10, 10, 10, 0.88), rgba(15, 15, 15, 0.94)),
         radial-gradient(circle at center, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.95)),
@@ -52,15 +42,10 @@ body {
     -webkit-backdrop-filter: blur(10px);
 }
 
-.navbar-brand {
-    white-space: nowrap;
-}
-
 .brand-logo {
     width: 50px;
     height: 50px;
     object-fit: contain;
-    display: inline-block;
 }
 
 .nav-link {
@@ -106,10 +91,6 @@ body {
 .feature-item:hover {
     background-color: rgba(255, 193, 7, 0.1) !important;
     border-color: var(--gold) !important;
-}
-
-.image-frame {
-    width: 100%;
 }
 
 .studio-img {
