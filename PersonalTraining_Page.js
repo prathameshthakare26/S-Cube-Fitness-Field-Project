@@ -17,7 +17,6 @@ const bookingMessage =
     document.getElementById("bookingMessage");
 
 
-/* Get all Book Slot buttons */
 
 const bookButtons =
     document.querySelectorAll(".book-btn");
